@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="dept" class="com.ydc.test.Department">
+        <property name="deptNo" value="1"></property>
+        <property name="name" value="技术部"></property>
+    </bean>
+
+    <bean id="user" class="com.ydc.test.User">
+        <property name="name" value="小明"></property>
+        <property name="age" value="18"></property>
+        <property name="address" value="昆明"></property>
+        <property name="sex" value="true"></property>
+        <property name="dept" ref="dept"></property>
+    </bean>
+
+</beans>
